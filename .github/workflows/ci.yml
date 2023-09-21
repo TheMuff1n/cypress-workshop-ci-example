@@ -30,8 +30,5 @@ jobs:
       - name: Build the app 🏗
         run: npm run build
 
-      - name: Start the app 📤
-        run: npm start &
-
       - name: Run Cypress tests 🧪
-        run: npm run cy:run
+        run: npm run e2e
