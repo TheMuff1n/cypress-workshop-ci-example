@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout 🛎
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       
       - name: Cache dependencies 💎
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: |
             ~/.cache
@@ -34,7 +34,7 @@ jobs:
         run: npm run e2e
 
       - name: Upload any screenshots and videos 📼
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         # make sure to run this step
         # even if the previous step fails
         if: always()
